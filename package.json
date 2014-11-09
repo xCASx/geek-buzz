@@ -1,0 +1,20 @@
+{
+  "name": "geek-buzz.com",
+  "version": "0.0.1",
+  "description": "Video records collection of public speeches from IT conferences, seminars, trainings etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "geek",
+    "buzz"
+  ],
+  "author": "Maxim Kolesnikov",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "grunt": "^0.4.5",
+    "napa": "^1.0.2"
+  }
+}
