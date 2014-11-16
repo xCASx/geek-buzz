@@ -1,4 +1,5 @@
 {
+  	"id": 1,
 	"video": "<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/ikSYLK1aChw\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
 	"title": "Практическое знакомство с Hazelcast",
 	"tags": ["hazelcast", "cache"],

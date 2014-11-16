@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 { expand: true, cwd: 'build/', src: 'styles.css', dest: 'dist/styles/' },
                 { expand: true, cwd: 'bower_components/bootstrap/', src: 'fonts/**', dest: 'dist/' }
             ]
-          },
+          }
         },
         // Выполняем команду при любом изменении файлов
         watch: {
