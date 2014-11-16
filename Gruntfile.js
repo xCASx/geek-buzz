@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         banner: '/* Author: Maxim Kolesnikov, http://about.me/kolesnikov.maxim/, <%= grunt.template.today("yyyy") %> */\n',
+        clean: ["build/", "dist/"],
         bower_concat: {
             all: {
                 dest: 'build/_bower.js',  // Склеенный файл
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
                 src: [
                     'build/_bower.js',
                     'bower_components/bootstrap-star-rating/js/star-rating.js',
-                    'scripts/**/*.js'  // Скрипты вашего сайта
+                    'app/js/**/*.js'  // Скрипты вашего сайта
                 ],
                 dest: 'build/scripts.js'
             },
@@ -56,7 +57,8 @@ module.exports = function(grunt) {
                     dest: 'dist/'
                 },
                 { expand: true, cwd: 'build/', src: 'scripts.js', dest: 'dist/js/' },
-                { expand: true, cwd: 'build/', src: 'styles.css', dest: 'dist/styles/' }
+                { expand: true, cwd: 'build/', src: 'styles.css', dest: 'dist/styles/' },
+                { expand: true, cwd: 'bower_components/bootstrap/', src: 'fonts/**', dest: 'dist/' }
             ]
           },
         },

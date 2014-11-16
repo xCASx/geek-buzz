@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" ng-controller="ContentController">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title ng-bind="header"></title>
 
     <!-- Bootstrap -->
     <link href="./styles/styles.css" rel="stylesheet">
@@ -21,7 +21,7 @@
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="#">
-	        <img alt="geek-buzz.com" src="...">
+	        <span>geek-buzz.com</span> <sup class="beta">beta</sup>
 	      </a>
 	    </div>
 	  </div>
@@ -30,10 +30,10 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="container">
       <div class="jumbotron">
-      	<h2>Практическое знакомство с Hazelcast</h2>
+      	<h2>{{data.title}}</h2>
       	<div class="row">
 	    	<div class="col-md-7">
-    			<iframe width="560" height="315" src="//www.youtube.com/embed/ikSYLK1aChw" frameborder="0" allowfullscreen=""></iframe>
+	    		<div ng-bind-html="data.video"></div>
 				<hr/>
 				<div class="social-likes">
 					<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
@@ -52,16 +52,16 @@
 		    	<hr/>
 		    	<div class="rating">
 		    		<h4>Оценка:</h4>
-		    		<input id="input-id" type="number" class="rating" data-glyphicon="false" data-min="0" data-max="10" data-step="1" data-size="xs" data-stars="10" data-star-captions="{}">
+		    		<input id="input-id" type="number" class="rating" value="{{data.rating}}" data-glyphicon="false" data-min="0" data-max="10" data-step="1" data-size="xs" data-stars="10" data-star-captions="{}">
 		    	</div>
 		    	<hr/>
 		    	<div class="bio">
-					<h4>Язык: украинский</h4>
-					<h4>Событие: UaDevClub</h4>
-					<h4>Город: Киев</h4>
-					<h4>Дата: 26.06.2014</h4>
+					<h4>Язык: {{data.language}}</h4>
+					<h4>Событие: {{data.event}}</h4>
+					<h4>Город: {{data.city}}</h4>
+					<h4>Дата: {{data.date}}</h4>
 					<h4>Описание:</h4>
-					<span>Доклад с 37-ой встречи Клуба анонимных разработчиков.</span>
+					<span>{{data.description}}</span>
 		    	</div>
 	    	</div>
 	    </div>

@@ -1,0 +1,11 @@
+{
+	"video": "<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/ikSYLK1aChw\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
+	"title": "Практическое знакомство с Hazelcast",
+	"tags": ["hazelcast", "cache"],
+	"rating": 7,
+	"language": "украинский",
+	"event": "UaDevClub",
+	"city": "Киев",
+	"date": "26.06.2014",
+	"description": "Доклад с 37-ой встречи Клуба анонимных разработчиков."
+}
