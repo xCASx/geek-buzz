@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 var path = require('path');
 var app = express();
+app.set('port', (process.env.PORT || 3000));
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://adm:PD9suf3928_39s-38@ds053190.mongolab.com:53190/heroku_app31680880');
@@ -51,4 +52,6 @@ app.get('/v/:id', function(req, res){
 	});
 });
 
-app.listen(3000);
+app.listen(app.get('port'), function() {
+    console.log("Node app is running at port:" + app.get('port'))
+})
