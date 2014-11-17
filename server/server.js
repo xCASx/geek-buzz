@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/geek-buzz');
+mongoose.connect('mongodb://adm:PD9suf3928_39s-38@ds053190.mongolab.com:53190/heroku_app31680880');
 
 var contentSchema = mongoose.Schema({
     id: Number,
