@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "Video records collection of public speeches from IT conferences, seminars, trainings etc.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/xCASx/geek-buzz.git"
+  },
   "scripts": {
+    "start": "cd server && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
