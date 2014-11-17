@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="ContentController">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title ng-bind="header"></title>
+
+    <!-- Bootstrap -->
+    <link href="./styles/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<nav class="navbar navbar-inverse" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <span>geek-buzz.com</span> <sup class="beta">beta</sup>
+	      </a>
+	    </div>
+	  </div>
+	</nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="container">
+      <div class="jumbotron">
+      	<h2>{{data.title}}</h2>
+      	<div class="row">
+	    	<div class="col-md-7">
+	    		<div ng-bind-html="data.video"></div>
+				<hr/>
+				<div class="social-likes">
+					<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+					<div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+					<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+					<div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+					<div class="pinterest" title="Поделиться картинкой на Пинтересте" data-media="">Pinterest</div>
+				</div>
+    		</div>
+	    	<div class="col-md-5">
+		    	<div class="tags">
+		    		<h4>Теги:</h4>
+		    		<a href="#" class="btn btn-xs btn-danger">hazlecast</a>
+		    		<a href="#" class="btn btn-xs btn-danger">cache</a>
+		    	</div>
+		    	<hr/>
+		    	<div class="rating">
+		    		<h4>Оценка:</h4>
+		    		<input id="input-id" type="number" class="rating" value="{{data.rating}}" data-glyphicon="false" data-min="0" data-max="10" data-step="1" data-size="xs" data-stars="10" data-star-captions="{}">
+		    	</div>
+		    	<hr/>
+		    	<div class="bio">
+					<h4>Язык: {{data.language}}</h4>
+					<h4>Событие: {{data.event}}</h4>
+					<h4>Город: {{data.city}}</h4>
+					<h4>Дата: {{data.date}}</h4>
+					<h4>Описание:</h4>
+					<span>{{data.description}}</span>
+		    	</div>
+	    	</div>
+	    </div>
+      </div>
+    </div>
+
+    <div class="container">
+ 		<div id="disqus_thread" class="jumbotron"></div>
+ 	</div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'geek-buzz'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/scripts.js"></script>
+    <!-- Google analytics -->
+    <script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>	
+  </body>
+</html>
